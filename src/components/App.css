@@ -1,0 +1,11 @@
+.App {
+  text-align: center;
+}
+
+form input, button{
+  margin: 0.5rem;
+  padding: 0.5rem;
+}
+form button{
+ width: 190px;
+}
