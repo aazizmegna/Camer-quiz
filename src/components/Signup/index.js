@@ -2,6 +2,8 @@ import React, {useState} from 'react'
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth } from '../Firebase/firebaseConfig';
 
+import {Link, useNavigate} from 'react-router-dom'
+
 const Signup = (props) => {
 
     const data={
@@ -15,6 +17,8 @@ const Signup = (props) => {
 
     const {username, email, password} = registerData;
 
+    const navigate = useNavigate();
+
     const handleSubmit = e => {
         e.preventDefault();
 
@@ -22,6 +26,8 @@ const Signup = (props) => {
         createUserWithEmailAndPassword(auth, email, password)
         .then (user =>{
             setRegisterData({...data})
+            navigate('/login', { replace: true});
+
         })
         .catch(error => {
             setError(error)
@@ -30,6 +36,7 @@ const Signup = (props) => {
     }
 
     const err = error !=='' && <span>{error.message}</span>
+    const btn = username ==='' || email ==='' || password ==='' ? <button disabled>Regester</button>: <button>Regester</button>
 
   return (
     <div>
@@ -48,9 +55,9 @@ const Signup = (props) => {
                 <input type='password' onChange={e => setRegisterData({...registerData, [e.target.id] : e.target.value})} id='password'value={password} placeholder='Password' required/>
             </div>
             <div>
-                <button>Submit</button>
+                {btn}
             </div>
-            <div>Already a member ? <a href='/'>Login</a></div>
+            <div>Already a member ? <Link to='/login'>Login</Link></div>
         </form>
     </div>
 
