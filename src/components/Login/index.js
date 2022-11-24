@@ -34,7 +34,7 @@ const Login = () => {
   const btn = email ==='' || password ==='' ? <button disabled>Login</button>: <button>Login</button>
 
   return (
-    <div>
+    <div className='loginStart'>
       <h1>Login</h1>
 
       {err}

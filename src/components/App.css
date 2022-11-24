@@ -1,7 +1,61 @@
-.App {
+.loginStart {
   text-align: center;
 }
 
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css?family=Anton|Bangers|Carter+One&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed&display=swap');
+
+:root {
+  --white-color: #ffffff;
+  --light-grey-color: #EAE8E8;
+  --light-green-color: #1ecc78;
+  --green-color: #0cb765;
+  --red-color: #EB1D27;
+  --blue-color: #4f78a4;
+  --dark-red-color: #d31017;
+  --dark-grey-color: #363636;
+  --black-color: #333030;
+  --deep-black-color: #000000;
+}
+
+* {
+  font-family: 'Roboto', sans-serif;
+}
+body {
+  margin: 0 2rem 1rem 2rem;
+  padding:0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+h1 {
+  font-family: 'Bangers', cursive;
+  font-size: 70px;
+  color: var(--white-color);
+  font-weight: normal;
+  text-align: center;
+  letter-spacing: 6px;
+  cursor: pointer;
+  margin: 0 auto;
+}
+
+h1 a {
+  color: inherit;
+  text-decoration: none;
+  font-family: 'Bangers', cursive;
+}
+
+h1 a:hover {
+  color: inherit;
+}
+
+h2,
+h3 {
+  font-weight: normal;
+  text-align: left;
+  font-family: 'Roboto Condensed', sans-serif;
+}
 form input, button{
   margin: 0.5rem;
   padding: 0.5rem;
@@ -9,3 +63,115 @@ form input, button{
 form button{
  width: 190px;
 }
+
+/* Logo */
+.logo-2 h3 {
+  color: #e74c3c;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 300;
+  font-size: 50px;
+  text-transform: uppercase;
+  line-height:1;
+  text-align: center;
+}
+.logo-2 p {
+  font-size: 14px;
+  padding-left: 0px;
+  color: #34495e;
+  font-weight: 600;  
+  text-transform: uppercase;
+  text-align: center;
+}
+
+/* LEVELS */
+.levelsContainer {
+  display: flex;
+  background-color: var(--light-grey-color);
+  padding: 20px;
+  margin-bottom: 40px;
+}
+
+.headingLevels {
+  margin: 0;
+}
+/* END LEVELS */
+
+/* PROGRESS BAR */
+.percentage {
+  display: flex;
+  justify-content: space-between;
+}
+
+.progressPercent {
+  text-align: center;
+  background-color: var(--light-grey-color);
+  color: var(--black-color);
+  flex: 0 1 40%;
+  padding: 8px 0;
+  border-radius: 6px;
+}
+
+.progressBar {
+  border: 1px solid var(--light-grey-color);
+  box-shadow: -1px 2px 8px 3px rgba(211, 209, 209, 0.3) inset;
+  height: 30px;
+  margin: 20px 0 20px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 6px;
+}
+
+.progressBarChange {
+  height: 18px;
+  text-align: center;
+  border-radius: 5px;
+  background: var(--red-color);
+}
+/* END PROGRESS BAR */
+
+/* ANSWER OPTIONS*/
+.answerOptions {
+  padding: 10px;
+  background-color: var(--light-grey-color);
+  line-height: 20px;
+  text-align: left;
+  border: none;
+  color: var(--black-color);
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 0;
+}
+
+.answerOptions:hover {
+  background-color: var(--red-color);
+  -webkit-box-shadow: 0px 4px 16px -5px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 4px 16px -5px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 4px 16px -5px rgba(0, 0, 0, 0.75);
+  cursor: pointer;
+  color: var(--white-color);
+}
+/* END ANSWER OPTIONS*/
+
+/* SUBMIT BUTTON */
+.btnSubmit {
+  font-size: 16px;
+  padding: 6px;
+  background-color: var(--red-color);
+  color: var(--white-color);
+  border-color: var(--red-color);
+  border-radius: 5px;
+  width: 150px;
+  display: block;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+.selected {
+  background-color: var(--red-color);
+  color: var(--white-color);
+  text-transform: uppercase;
+}
+/* END SUBMIT BUTTON */

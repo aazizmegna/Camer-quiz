@@ -39,7 +39,7 @@ const Signup = (props) => {
     const btn = username ==='' || email ==='' || password ==='' ? <button disabled>Regester</button>: <button>Regester</button>
 
   return (
-    <div>
+    <div className='loginStart'>
         <h1>Signup</h1>
 
         {err}
